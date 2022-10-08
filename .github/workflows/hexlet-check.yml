@@ -8,7 +8,7 @@
 
 name: hexlet-check
 
-on:
+on: push
   push:
     branches:
       - '**'
