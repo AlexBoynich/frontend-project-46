@@ -21,7 +21,7 @@ const getDiff = (data1, data2) => {
 
   // если равны ключи , но значения разные
   return `\n- ${key}: ${data1[key]}\n+ ${key}: ${data2[key]}`;
-})} \n}`;
+})}\n}`;
 
 return diff;
 };

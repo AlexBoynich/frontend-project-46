@@ -25,3 +25,7 @@ jobs:
         uses: hexlet/project-action@release
         with:
           hexlet-id: ${{ secrets.HEXLET_ID }}
+      - name: let's Jest
+        run: NODE_OPTIONS=--experimental-vm-modules npx jest     
+      - name: let's lint
+        run: make lint    
