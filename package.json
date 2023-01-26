@@ -13,7 +13,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/AlexBoynich/frontend-project-46#readme",
   "dependencies": {
     "commander": "^9.4.1",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "path": "^0.12.7"
   },
@@ -36,6 +37,6 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^27.1.0",
-    "jest": "^29.1.2"
+    "jest": "^29.4.0"
   }
 }
