@@ -25,13 +25,11 @@ const outputJson = readFileSync('__fixtures__/correct_output_json.json', 'utf8')
 test('gendiff for tree .json, plain format', () => {
   const path1 = 'file1.tree.json';
   const path2 = 'file2.tree.json';
-  const formatType = 'plain';
-  expect(genDiff(path1, path2)).toEqual(outputList);
+  expect(genDiff(path1, path2, 'plain')).toEqual(outputList);
 });
 
 test('gendiff for tree .json, json format', () => {
   const path1 = 'file1.tree.json';
   const path2 = 'file2.tree.json';
-  const formatType = 'json';
-  expect(genDiff(path1, path2)).toEqual(outputJson);
+  expect(genDiff(path1, path2, 'json')).toEqual(outputJson);
 });
