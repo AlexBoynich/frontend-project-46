@@ -9,15 +9,13 @@ const getPath = (filepath) => path.join(process.cwd(), filepath);
 
 const getFileFormat = (filepath) => path.extname(filepath).slice(1);
 
-const readFile = (filepath) => fs.readFileSync(filepath, 'utf8');
-
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const path1 = getPath(filepath1);
   const path2 = getPath(filepath2);
   const fileFormat1 = getFileFormat(filepath1);
   const fileFormat2 = getFileFormat(filepath2);
-  const data1 = parse(readFile(path1), fileFormat1);
-  const data2 = parse(readFile(path2), fileFormat2);
+  const data1 = parse(fs.readFileSync(path1, 'utf8'), fileFormat1);
+  const data2 = parse(fs.readFileSync(path2, 'utf8'), fileFormat2);
   const diffs = getDiff(data1, data2);
   const formattedDiffs = getFormatting(diffs, formatName );
   return formattedDiffs;
