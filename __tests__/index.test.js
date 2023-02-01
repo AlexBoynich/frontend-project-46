@@ -12,8 +12,8 @@ const outputJson = readFileSync('__fixtures__/correct_output_json.json', 'utf8')
     expect(genDiff(path1, path2, 'stylish')).toEqual(outputPlain);
   });
   test('gendiff for .yml', () => {
-    const path1 = '__fixtures__/file1.yaml';
-    const path2 = '__fixtures__/file2.yaml';
+    const path1 = '__fixtures__/file1.yml';
+    const path2 = '__fixtures__/file2.yml';
     expect(genDiff(path1, path2)).toEqual(outputPlain);
   });
   test('gendiff for tree .json', () => {
