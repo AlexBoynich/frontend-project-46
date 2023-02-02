@@ -18,6 +18,6 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const data2 = parse(fs.readFileSync(path2, 'utf8'), fileFormat2);
   const diffs = getDiff(data1, data2);
   const formattedDiffs = getFormatting(diffs, formatName );
-  return formattedDiffs;
+  return formattedDiffs
 }
   export default genDiff;
