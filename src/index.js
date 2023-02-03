@@ -2,10 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import getDiff from './getDiff.js'
 import parse from './parser.js'
-import process from 'node:process';
 import getFormatting from './formatters/index.js'
 
-const getPath = (filepath) => path.join(process.cwd(), filepath);
+const getPath = (filepath) => path.resolve(process.cwd(), filepath);
 
 const getFileFormat = (filepath) => path.extname(filepath).slice(1);
 
