@@ -1,4 +1,7 @@
 const stringify = (value) => {
+  if (value === null) {
+    return null;
+  }
     if (typeof value === 'object' && value !== null) {
       return '[complex value]';
     }
