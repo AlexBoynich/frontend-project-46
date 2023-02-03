@@ -8,7 +8,7 @@ const getPath = (filepath) => path.resolve(process.cwd(), filepath);
 
 const getFileFormat = (filepath) => path.extname(filepath).slice(1);
 
-const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
+const gendiff = (filepath1, filepath2, formatName = 'stylish') => {
   const path1 = getPath(filepath1);
   const path2 = getPath(filepath2);
   const fileFormat1 = getFileFormat(filepath1);
@@ -19,4 +19,4 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const formattedDiffs = getFormatting(diffs, formatName );
   return formattedDiffs
 }
-  export default genDiff;
+  export default gendiff;
