@@ -1,6 +1,5 @@
 import _ from 'lodash';
 
-
 const getDiff = (data1, data2) => {
   const keys = _.sortBy(_.union(_.keys(data1), _.keys(data2)));
   const diff = keys.flatMap((key) => {
@@ -40,7 +39,7 @@ const getDiff = (data1, data2) => {
     };
   });
 
-return diff;
+  return diff;
 };
 
 export default getDiff;
