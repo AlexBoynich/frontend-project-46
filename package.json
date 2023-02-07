@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Difference Calculator. HEXLET frontend-developer project №2",
   "bin": {
-    "nodejs-package": "bin/nodejs-package.js"
+    "nodejs-package": "bin/nodejs-package.js",
+    "gendiff": "bin/gendiff.js"
   },
   "simple-git-hooks": {
     "pre-push": "make lint"
