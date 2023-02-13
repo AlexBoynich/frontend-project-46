@@ -16,7 +16,7 @@ const stringify = (value, depth) => {
 };
 
 const formatStylish = (tree) => {
-  const iter = (data, depth) => {
+  const iter = (data, depth = 0) => {
     const lines = data.map((node) => {
       switch (node.type) {
         case 'added':
@@ -43,6 +43,6 @@ const formatStylish = (tree) => {
     ].join('\n');
   };
 
-  return iter(tree, 0);
+  return iter(tree);
 };
 export default formatStylish;
